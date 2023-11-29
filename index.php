@@ -26,43 +26,51 @@ if (isset($_GET["vote"]) && $_GET["vote"] !== "all") {
 
 <main>
     <div class="container">
-        <div class="card p-2">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Parking</th>
-                        <th scope="col">Vote</th>
-                        <th scope="col">Distance to center</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($hotels as $hotel) { ?>
+        <?php if (count($hotels) > 0) { ?>
+            <h4>We found
+                <?php echo count($hotels) ?> results for your research.
+            </h4>
+            <div class="card p-2">
+                <table class="table table-striped">
+                    <thead>
                         <tr>
-                            <?php foreach ($hotel as $key => $value) { ?>
-                                <td>
-                                    <?php
-                                    if ($key === 'parking' && $value === true) {
-                                        echo "yes";
-                                    } elseif ($key === 'parking' && $value === false) {
-                                        echo 'no';
-                                    } else {
-                                        echo $value;
-                                    }
-                                    ?>
-                                </td>
-                            <?php } ?>
+                            <th scope="col">Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Parking</th>
+                            <th scope="col">Vote</th>
+                            <th scope="col">Distance to center</th>
                         </tr>
-                        <!-- <div>
-                            <?php
-                            echo "$hotel[name] $hotel[description] $hotel[parking] $hotel[vote] $hotel[distance_to_center]"
-                                ?>
-                        </div> -->
-                    <?php } ?>
-                </tbody>
-            </table>
-        </div>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($hotels as $hotel) { ?>
+                            <tr>
+                                <?php foreach ($hotel as $key => $value) { ?>
+                                    <td>
+                                        <?php
+                                        if ($key === 'parking' && $value === true) {
+                                            echo "yes";
+                                        } elseif ($key === 'parking' && $value === false) {
+                                            echo 'no';
+                                        } else {
+                                            echo $value;
+                                        }
+                                        ?>
+                                    </td>
+                                <?php } ?>
+                            </tr>
+                            <!-- <div>
+                                <?php
+                                echo "$hotel[name] $hotel[description] $hotel[parking] $hotel[vote] $hotel[distance_to_center]"
+                                    ?>
+                            </div> -->
+                        <?php } ?>
+                    </tbody>
+                </table>
+            </div>
+        <?php } else { ?>
+            <div class="alert alert-danger">Currently there are no results with these features, please try searching again
+                by modifying the filters.</div>
+        <?php } ?>
     </div>
 
 

@@ -45,14 +45,14 @@ include __DIR__ . "/../Model/db.php";
                 <h2>Filter your research</h2>
                 <form role="search" method="GET" action="index.php">
                     <div class="d-flex g-3">
-                        <div class="col-12 col-md-4 col-lg-3 w-25">
+                        <div class="w-25 pe-3">
                             <select class="form-select" placeholder="Search" aria-label="Search" name="parking">
                                 <option value="all">Parking available <i class="fa-solid fa-chevron-down"></i> </option>
                                 <option value="0">No</option>
                                 <option value="1">Yes</option>
                             </select>
                         </div>
-                        <div class="col-12 col-md-4 col-lg-3 w-25">
+                        <div class="w-25 pe-3">
                             <select class="form-select" placeholder="Search" aria-label="Search" name="vote">
                                 <option value="all">Vote</option>
                                 <option value="1">1</option>
