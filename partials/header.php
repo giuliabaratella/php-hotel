@@ -43,13 +43,28 @@ include __DIR__ . "/../Model/db.php";
             </nav>
             <div class="card p-2 mb-5">
                 <h2>Filter your research</h2>
-                <form class="d-flex" role="search" method="GET" action="index.php">
-                    <select class="form-control me-2" placeholder="Search" aria-label="Search" name="parking">
-                        <option value="all">Parking available <i class="fa-solid fa-chevron-down"></i> </option>
-                        <option value="0">No</option>
-                        <option value="1">Yes</option>
-                    </select>
-                    <button class="btn btn-primary" type="submit">Search</button>
+                <form role="search" method="GET" action="index.php">
+                    <div class="d-flex g-3">
+                        <div class="col-12 col-md-4 col-lg-3 w-25">
+                            <select class="form-select" placeholder="Search" aria-label="Search" name="parking">
+                                <option value="all">Parking available <i class="fa-solid fa-chevron-down"></i> </option>
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-3 w-25">
+                            <select class="form-select" placeholder="Search" aria-label="Search" name="vote">
+                                <option value="all">Vote</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Search</button>
+
+                    </div>
                 </form>
             </div>
 

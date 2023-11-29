@@ -11,8 +11,16 @@ if (isset($_GET["parking"])) {
         }
         $hotels = $tempArray;
     }
-
-
+}
+if (isset($_GET["vote"]) && $_GET["vote"] !== "all") {
+    $vote = intval($_GET["vote"]);
+    $tempArray = [];
+    foreach ($hotels as $hotel) {
+        if ($hotel['vote'] >= $vote) {
+            $tempArray[] = $hotel;
+        }
+    }
+    $hotels = $tempArray;
 }
 ?>
 
