@@ -49,6 +49,18 @@ include __DIR__ . "/../Model/db.php";
                                 <option value="5">5</option>
                             </select>
                         </div>
+                        <div class="w-25 pe-3">
+                            <select class="form-select" placeholder="Search" aria-label="Search"
+                                name="distance_to_center">
+                                <option value="all">Distance to Center</option>
+                                <option value="1">1 km or less</option>
+                                <option value="2">2 km or less</option>
+                                <option value="5">5 km or less</option>
+                                <option value="10">10 km or less</option>
+                                <option value="50">50 km or less</option>
+
+                            </select>
+                        </div>
                         <button class="btn btn-primary" type="submit">Search</button>
 
                     </div>

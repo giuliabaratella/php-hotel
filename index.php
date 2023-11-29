@@ -22,6 +22,15 @@ if (isset($_GET["vote"]) && $_GET["vote"] !== "all") {
     }
     $hotels = $tempArray;
 }
+
+if (isset($_GET['distance_to_center'])) {
+    function filterDistance($hotel)
+    {
+        $distance = $_GET['distance_to_center'];
+        return $hotel['distance_to_center'] <= $distance;
+    }
+    $hotels = array_filter($hotels, 'filterDistance');
+}
 ?>
 
 <main>
