@@ -25,7 +25,7 @@ if (isset($_GET["vote"]) && $_GET["vote"] !== "all") {
 ?>
 
 <main>
-    <div class="container">
+    <div class="container mb-5">
         <?php if (count($hotels) > 0) { ?>
             <h4>We found
                 <?php echo count($hotels) ?> results for your research.
@@ -58,11 +58,6 @@ if (isset($_GET["vote"]) && $_GET["vote"] !== "all") {
                                     </td>
                                 <?php } ?>
                             </tr>
-                            <!-- <div>
-                                <?php
-                                echo "$hotel[name] $hotel[description] $hotel[parking] $hotel[vote] $hotel[distance_to_center]"
-                                    ?>
-                            </div> -->
                         <?php } ?>
                     </tbody>
                 </table>

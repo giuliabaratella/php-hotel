@@ -11,6 +11,9 @@ include __DIR__ . "/../Model/db.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Hotel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,26 +24,10 @@ include __DIR__ . "/../Model/db.php";
 
 <body>
     <header>
+        <div id="hero" class="mb-5">
+            <h1><a href="index.php">PHP Hotels</a></h1>
+        </div>
         <div class="container">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary mb-5">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="index.php">PHP Hotel</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-                            </li>
-
-                        </ul>
-
-                    </div>
-                </div>
-            </nav>
             <div class="card p-2 mb-5">
                 <h2>Filter your research</h2>
                 <form role="search" method="GET" action="index.php">

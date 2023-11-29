@@ -1,0 +1,19 @@
+#hero {
+    background-image: url(https://bangiresorthotel.com/wp-content/uploads/2021/06/bannermidd.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+h1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.723);
+    width: 100%;
+    
+}
+h1 a{
+    font-family: 'DM Serif Display', serif;
+    color: #0b5ed7;
+}
